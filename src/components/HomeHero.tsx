@@ -1,0 +1,50 @@
+import logo from '../assets/brand/logo-akiturhs.png';
+
+export default function HomeHero() {
+  return (
+    <section className="bg-[#020B1F] text-white">
+      <div className="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-2 items-center">
+        <div>
+          <img src={logo} alt="AKITURHS Tech Solutions LLP" className="w-40 mb-6" />
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
+            Smart Tech Solutions
+            <br />
+            for Growing Businesses
+          </h1>
+          <p className="mt-4 text-slate-300">
+            We design and build custom web applications, cloud platforms and digital products
+            that help you move faster and scale with confidence.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <a
+              href="/contact"
+              className="px-6 py-3 rounded-md bg-cyan-500 hover:bg-cyan-400 text-white font-semibold transition"
+            >
+              Book a free consultation
+            </a>
+            <a
+              href="/services"
+              className="px-6 py-3 rounded-md border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold transition"
+            >
+              View all services
+            </a>
+          </div>
+        </div>
+
+        <div className="hidden md:block">
+          <div className="rounded-3xl border border-cyan-500/40 bg-[#050F26] p-6 shadow-xl">
+            <p className="text-sm text-cyan-300 font-semibold uppercase tracking-wide mb-3">
+              What we deliver
+            </p>
+            <ul className="space-y-2 text-slate-200 text-sm">
+              <li>• Modern web applications (React, .NET, Node.js)</li>
+              <li>• Secure APIs and integrations</li>
+              <li>• Cloud & DevOps on AWS / Azure</li>
+              <li>• Long‑term support and maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
