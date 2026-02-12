@@ -1,19 +1,19 @@
 import logo from '../assets/brand/logo-akiturhs.png';
+import { companyConfig } from '../config/company';
 
 export default function HomeHero() {
   return (
     <section className="bg-[#020B1F] text-white">
       <div className="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-2 items-center">
         <div>
-          <img src={logo} alt="AKITURHS Tech Solutions LLP" className="w-40 mb-6" />
+          <img src={logo} alt={companyConfig.name} className="w-40 mb-6" />
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
-            Smart Tech Solutions
+            {companyConfig.tagline.split(' ').slice(0, 2).join(' ')}
             <br />
-            for Growing Businesses
+            {companyConfig.tagline.split(' ').slice(2).join(' ')}
           </h1>
           <p className="mt-4 text-slate-300">
-            We design and build custom web applications, cloud platforms and digital products
-            that help you move faster and scale with confidence.
+            {companyConfig.description}
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <a
@@ -37,10 +37,9 @@ export default function HomeHero() {
               What we deliver
             </p>
             <ul className="space-y-2 text-slate-200 text-sm">
-              <li>• Modern web applications (React, .NET, Node.js)</li>
-              <li>• Secure APIs and integrations</li>
-              <li>• Cloud & DevOps on AWS / Azure</li>
-              <li>• Long‑term support and maintenance</li>
+              {companyConfig.services.map((service, index) => (
+                <li key={index}>• {service}</li>
+              ))}
             </ul>
           </div>
         </div>

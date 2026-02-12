@@ -1,10 +1,13 @@
+import React from 'react';
+import { companyConfig } from '../config/company';
+
 export default function ContactPage() {
     return (
       <div className="min-h-screen bg-[#020B1F] text-white">
         <section className="max-w-4xl mx-auto px-6 py-12 space-y-8">
           <header>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
-              Contact AKITURHS
+              Contact {companyConfig.shortName}
             </h1>
             <p className="text-slate-300 text-sm max-w-2xl">
               Reach out to discuss projects, partnerships or support. The team will respond
@@ -24,7 +27,7 @@ export default function ContactPage() {
                   Location
                 </p>
                 <p className="text-sm text-slate-200">
-                  Baijnath, Himachal Pradesh, India
+                  {companyConfig.contact.address || 'Baijnath, Himachal Pradesh, India'}
                 </p>
               </div>
   
@@ -33,10 +36,10 @@ export default function ContactPage() {
                   Email
                 </p>
                 <a
-                  href="mailto:akiturhstechsolutions@gmail.com"
+                  href={`mailto:${companyConfig.contact.email}`}
                   className="text-sm text-cyan-400 hover:text-cyan-300"
                 >
-                  akiturhstechsolutions@gmail.com
+                  {companyConfig.contact.email}
                 </a>
               </div>
   
@@ -45,10 +48,10 @@ export default function ContactPage() {
                   Phone / WhatsApp
                 </p>
                 <a
-                  href="tel:+916230221864"
+                  href={`tel:${companyConfig.contact.phone.replace(/\s/g, '')}`}
                   className="text-sm text-cyan-400 hover:text-cyan-300"
                 >
-                  +91 6230221864
+                  {companyConfig.contact.phone}
                 </a>
               </div>
             </div>

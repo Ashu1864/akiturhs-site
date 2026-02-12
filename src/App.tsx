@@ -7,6 +7,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import CareerPage from './pages/CareerPage';
 import ContactPage from './pages/ContactPage';
 import logo from './assets/brand/logo-akiturhs.png';
+import { companyConfig } from './config/company';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <Link to="/" className="flex items-center gap-2">
             <img
               src={logo}
-              alt="AKITURHS Tech Solutions LLP"
+              alt={companyConfig.name}
               className="h-8 w-auto"
             />
           </Link>
@@ -50,9 +51,9 @@ function App() {
       <footer className="w-full border-t border-slate-800 bg-[#020B1F]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400">
           <span>
-            © {new Date().getFullYear()} AKITURHS Tech Solutions LLP. All rights reserved.
+            © {companyConfig.copyrightYear} {companyConfig.name}. All rights reserved.
           </span>
-          <span>Designed &amp; developed by AKITURHS.</span>
+          <span>Designed &amp; developed by {companyConfig.shortName}.</span>
         </div>
       </footer>
     </div>
