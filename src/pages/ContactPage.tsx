@@ -1,4 +1,3 @@
-import React from 'react';
 import { companyConfig } from '../config/company';
 
 export default function ContactPage() {
